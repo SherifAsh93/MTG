@@ -18,15 +18,20 @@ These override any conflicting guidance elsewhere in this file.
 
 ## Branch
 - **The only valid branch is `main`.** Never edit, commit, or push on `master`, a feature branch, or a detached HEAD.
-- Before ANY change, run and verify:
-  - `sudo -u sherif git -C /home/sherif/workspaces/WebistryDev checkout main`
-  - `sudo -u sherif git -C /home/sherif/workspaces/WebistryDev branch --show-current` → must print `main`
-- If `main` is missing, the checkout fails, or the repo is detached: **STOP and report**. Do not force checkout, do not stash, do not reset.
+- `master` is archive-only.
 
-## Source of truth
-- `/home/sherif/workspaces/WebistryDev` is the **source of truth for edits**.
-- Edit there, on `main`, then deploy per the Infrastructure Map below.
-- `/home/sherif/sites/*` are runtime/deployment directories — do not treat them as the primary edit location unless the user explicitly says so.
+## Worktree rule (MANDATORY)
+- Every WebistryDev task MUST run in a fresh, clean worktree of `main`:
+  1. `sudo -u sherif git -C /home/sherif/workspaces/WebistryDev fetch origin`
+  2. `sudo -u sherif git -C /home/sherif/workspaces/WebistryDev worktree add --detach /home/sherif/tmp/<task> origin/main`
+  3. Do all work inside `/home/sherif/tmp/<task>` (owned by user `sherif`)
+  4. When the task is done: `sudo -u sherif git -C /home/sherif/workspaces/WebistryDev worktree remove /home/sherif/tmp/<task>`
+- Before editing, verify `git status --short` in the worktree is empty and HEAD matches current `origin/main`.
+- If a clean worktree cannot be created: **STOP and report**. Do not force, stash, or reset.
+
+## Archive workspace
+- `/home/sherif/workspaces/WebistryDev` stays on `master` as a **permanent archive** (218 modified + 187 untracked files, intentionally preserved). Read it if useful; never edit, stash, reset, or switch branches there.
+- `/home/sherif/sites/*` are runtime/deployment directories — not edit targets.
 
 ## Hard stops
 - **NEVER run `pm2 restart all`.** It kills the OpenCode harness (`opencode-web`, `opencode-serve`, `opencode-telegram`). Restart only the exact process name, and only with confirmation.
@@ -60,7 +65,7 @@ Apply this protocol to every task on the WebistryDev VPS or any project under `/
 - Wait for explicit confirmation.
 
 ## 4. Apply
-- Confirm the branch first: `sudo -u sherif git -C <repo> checkout main` and verify it prints `main` (see Branch & Safety Rules).
+- Confirm the worktree first: it must be a clean `origin/main` checkout (see Worktree rule). Never edit the archive workspace.
 - Back up first: `cp file file.bak.$(date +%Y%m%d%H%M%S)` on the VPS.
 - Write via SSH (`cat > file <<'EOF'` heredoc or `sed`), never from the local `D:\Work\WebistryDev` folder.
 - Keep changes minimal and consistent with surrounding code style.
@@ -124,7 +129,7 @@ Also running: nginx (all 443 vhosts), certbot.timer.
 | Project path | Remote | Branch | Deploy |
 |---|---|---|---|
 | `/home/sherif/sites/webistrydev` | `SherifAsh93/webistrydev` | `main` | Vercel (`webistrydev` project) |
-| `/home/sherif/workspaces/WebistryDev` | `SherifAsh93/webistrydev` | **`main` required** (was found on `master` — checkout before any edit) | **Source of truth for edits** |
+| `/home/sherif/workspaces/WebistryDev` | `SherifAsh93/webistrydev` | `master` = **permanent archive** (218 M + 187 untracked, do not touch) | Never edit; task work goes to a clean worktree |
 | `Projects/Ahmed-Elakad` | `SherifAsh93/Ahmed-Elakad` | varies | Vercel (`ahmed-elakad`) |
 | `Projects/Zahrtelkhlig` | `SherifAsh93/Zahrtelkhlig` | main | Vercel (`zahrtelkhlig`) |
 | `Projects/Leads` / `sites/leads-form` | `SherifAsh93/leads-form` | main | Vercel (`leads-form`) |
@@ -143,7 +148,7 @@ Other `sites/` entries are symlinks into `workspaces/WebistryDev/Projects/` (Ame
 - `sites-enabled/ahmedelakad.com` is a real file; `sites-available/ahmedelakad.com` is stale (`:3000` vs live `:3002`). Edit the enabled file and reload.
 - Git must run as `sherif`: `sudo -u sherif git -C <dir> ...`. Running as root fails with "dubious ownership".
 - Pushes work via `credential.helper=store` + `/home/sherif/.git-credentials`, and some remotes embed a PAT in the URL. Never rewrite remotes.
-- The workspace repo has long-standing uncommitted doc edits — always `git add <exact files>`, never `git add -A`.
+- In a task worktree, stage exact files only: `git add <file>`, never `git add -A` or `git commit -a`.
 - `webistrydev.com` on the VPS has no TLS vhost anymore. If DNS is ever pointed back to `76.13.42.219`, re-issue a cert and restore the vhost from `/root/nginx-backup-20261025/webistrydev.com.vhost`.
 
 ## Known issues (as of 2026-10-25)
