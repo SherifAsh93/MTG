@@ -151,6 +151,20 @@ Other `sites/` entries are symlinks into `workspaces/WebistryDev/Projects/` (Ame
 - In a task worktree, stage exact files only: `git add <file>`, never `git add -A` or `git commit -a`.
 - `webistrydev.com` on the VPS has no TLS vhost anymore. If DNS is ever pointed back to `76.13.42.219`, re-issue a cert and restore the vhost from `/root/nginx-backup-20261025/webistrydev.com.vhost`.
 
+## Server security state (2026-10-26)
+
+- **ufw active**: allow 22, 80, 443 (+ pre-existing xrdp 3389, rustdesk 21114-21119, 4000). Default deny incoming.
+- App ports 3001/3002/3400/3111/3210 are **internal only**. Never expose them.
+- **SSH**: keys only. `PermitRootLogin prohibit-password`, `PasswordAuthentication no`. Drop-in: `/etc/ssh/sshd_config.d/00-hardening.conf` (first-wins; cloud-init 50/60 drop-ins override anything numbered later).
+- **ufw pitfall**: `ufw --force allow` is INVALID syntax. Correct: `ufw allow 22/tcp`, then `ufw --force enable`. Always confirm `ufw show added` lists 22 BEFORE enabling, and arm `sleep 240; [ -f /tmp/ufw-ok ] || ufw --force disable` until an external login succeeds. A lockout on 2026-10-26 required VPS console recovery.
+- Backups: `/root/cleanup-backup-20261026/`, `/root/nginx-backup-20261025/`.
+
+## Protected paths (never delete, restart, or clean)
+
+- `/home/sherif/workspaces/WebistryDev/Projects/Amgad-Elwaziry` and pm2 process `amgad-preview` — actively developed by another agent.
+- `/home/sherif/ahmed-hardening-20261009`, `/home/sherif/ahmed-cutover-2026-10-06`, `/home/sherif/ahmed-vps-work-20261007` — ahmed site history. `ahmed-vps-implementation.service` (enabled) runs `ahmed-vps-work-20261007/run-worker.cjs` at boot, so that directory is a live dependency.
+- Never run `pm2 restart all`.
+
 ## Known issues (as of 2026-10-25)
 
 - `qoya-preview.*.nip.io` returns 502 — nothing listens on :3111. Vhost and cert still active.
