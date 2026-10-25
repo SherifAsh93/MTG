@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.private/
+.env
+.env.*
+!.env.example
+!.env.migration.example
+reports/
+output/
+*.log

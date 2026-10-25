@@ -1,0 +1,9 @@
+.local/
+.private/
+.neon
+node_modules/
+.env
+.env.*
+!.env.example
+reports/
+*.log

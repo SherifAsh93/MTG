@@ -1,0 +1,18 @@
+{
+  "name": "contigoo-blueprint-documents",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local documentation rendering and validation; not the platform application stack.",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node verify.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "1.0.9",
+    "marked": "4.3.0",
+    "pdfjs-dist": "6.3.289",
+    "puppeteer-core": "25.11.0"
+  }
+}

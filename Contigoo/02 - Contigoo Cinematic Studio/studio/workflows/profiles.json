@@ -1,0 +1,12 @@
+{
+  "flux-schnell": {
+    "workflow": "flux-schnell.json",
+    "bindings": {
+      "prompt": { "node": "6", "input": "text" },
+      "seed": { "node": "3", "input": "seed" },
+      "width": { "node": "5", "input": "width" },
+      "height": { "node": "5", "input": "height" }
+    },
+    "outputNodes": ["9"]
+  }
+}

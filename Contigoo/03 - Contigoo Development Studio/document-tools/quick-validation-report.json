@@ -1,0 +1,70 @@
+{
+  "document": "CONTIGOO_QUICK_GUIDE.pdf",
+  "verifiedAt": "2026-09-30T22:18:00.786Z",
+  "sha256": "1c7c1f368993df6ac56bcbbcee215bae796efcf8f7a7adfba96af02c17e08b53",
+  "bytes": 337176,
+  "pages": 3,
+  "expectedPages": 3,
+  "applicationTests": "Not run — this validates the document only.",
+  "pageChecks": [
+    {
+      "page": 1,
+      "characters": 2459,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 2,
+      "characters": 2593,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 3,
+      "characters": 2494,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "Q1",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "Q2",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "Q3",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "Q4",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "Q5",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "Q6",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    }
+  ]
+}

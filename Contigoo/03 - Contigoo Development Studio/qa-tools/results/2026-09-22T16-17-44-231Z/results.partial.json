@@ -1,0 +1,20 @@
+{
+  "runId": "2026-09-22T16-17-44-231Z",
+  "commit": "7b1d376c2563b61fbd433a435c4e3cf25c14bd9c",
+  "results": [
+    {
+      "id": "B-STORAGE-MULTITAB",
+      "area": "Persistence failure",
+      "title": "Two tabs must not silently overwrite each other",
+      "steps": "Open two same-origin tabs before edits; create a different client in each; inspect stored data.",
+      "expected": "Both clients survive, or a clear conflict prevents overwriting the first tab.",
+      "layer": "Browser",
+      "severity": "High",
+      "status": "Failed",
+      "actual": "First tab's client was lost. Persisted names: QA Client Alpha, QA Client Beta, QA Tab Beta; feedback: Client created. Add a project when you are ready.",
+      "browserErrors": [],
+      "durationMs": 1819,
+      "screenshot": "qa-tools/results/2026-09-22T16-17-44-231Z/screenshots/B-STORAGE-MULTITAB.png"
+    }
+  ]
+}

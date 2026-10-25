@@ -1,0 +1,31 @@
+{
+  "document": "CONTIGOO_STUDIO_NOTES",
+  "pages": 4,
+  "layout": [
+    {
+      "page": 1,
+      "height": 960,
+      "usedHeight": 834,
+      "overflowElements": []
+    },
+    {
+      "page": 2,
+      "height": 960,
+      "usedHeight": 936,
+      "overflowElements": []
+    },
+    {
+      "page": 3,
+      "height": 960,
+      "usedHeight": 959,
+      "overflowElements": []
+    },
+    {
+      "page": 4,
+      "height": 960,
+      "usedHeight": 961,
+      "overflowElements": []
+    }
+  ],
+  "overflow": []
+}

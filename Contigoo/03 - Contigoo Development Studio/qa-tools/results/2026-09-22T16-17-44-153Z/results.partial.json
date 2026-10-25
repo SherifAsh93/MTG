@@ -1,0 +1,18 @@
+{
+  "runId": "2026-09-22T16-17-44-153Z",
+  "commit": "7b1d376c2563b61fbd433a435c4e3cf25c14bd9c",
+  "results": [
+    {
+      "id": "B-CONCEPT-PREVIEWS",
+      "area": "Concept previews",
+      "title": "Website/storefront navigation and Escape",
+      "steps": "Open public-site concept; navigate to app section/Studio; preview a commerce project and click collection.",
+      "expected": "Concept links/close controls work; no checkout or real deployment is falsely performed.",
+      "layer": "Browser",
+      "severity": "Medium",
+      "status": "Passed",
+      "actual": "All assertions for the listed expected result passed.",
+      "durationMs": 1439
+    }
+  ]
+}

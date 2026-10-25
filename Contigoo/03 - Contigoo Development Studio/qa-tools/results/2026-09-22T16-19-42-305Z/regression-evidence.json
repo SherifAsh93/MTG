@@ -1,0 +1,209 @@
+{
+  "date": "2026-09-22T15:49:53.251Z",
+  "scope": "Local client/project management, shared metadata, browser mobile preview, visual builder, generic runtime and illustrative quotations only; no production authentication, native packaging/PWA installation, server tenancy, payment, AI integration or VPS validation.",
+  "viewport": {
+    "desktop": "1440x1080",
+    "mobile": "390x844",
+    "dialog": [
+      "1024x664",
+      "667x830",
+      "390x500"
+    ]
+  },
+  "results": [
+    {
+      "name": "Fresh workspace starts empty with no fabricated clients, projects or activity",
+      "status": "passed"
+    },
+    {
+      "name": "Project publications retain earlier configuration and quote snapshots, including legacy versions",
+      "status": "passed"
+    },
+    {
+      "name": "Project archive/reactivation and deletion preserve the client, other projects, data and shared assets",
+      "status": "passed"
+    },
+    {
+      "name": "Sample registry: thirteen distinct modules include the selectable Mobile app capability",
+      "status": "passed"
+    },
+    {
+      "name": "Starters: blank is default, categories use valid distinct modules, legacy projects remain compatible",
+      "status": "passed"
+    },
+    {
+      "name": "Model: client configurations are independent and templates are not mutated",
+      "status": "passed"
+    },
+    {
+      "name": "Model: publish creates an immutable-by-copy snapshot and requires an app",
+      "status": "passed"
+    },
+    {
+      "name": "Model: entities and fields reject duplicates and invalid references/types",
+      "status": "passed"
+    },
+    {
+      "name": "Shared entity deletion: field consent and invalid references fail atomically; app data, prices and published versions are preserved",
+      "status": "passed"
+    },
+    {
+      "name": "Shared entity deletion: remove the last entity, preserve empty state across reload, then add a replacement",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile app: category starter, editable placeholder prices and reusable record/rule model remain project-specific",
+      "status": "passed"
+    },
+    {
+      "name": "Migration: existing client IDs, branding, shared fields and published snapshots survive",
+      "status": "passed"
+    },
+    {
+      "name": "Client directory migration: repeatable linking preserves complete project data, including records and published quotes",
+      "status": "passed"
+    },
+    {
+      "name": "Client profiles: create without projects, validate atomic edits, keep project names and branding separate",
+      "status": "passed"
+    },
+    {
+      "name": "Multiple projects per client: app edits, records, quotes and publications are independent",
+      "status": "passed"
+    },
+    {
+      "name": "Client deletion: explicit related-project confirmation, atomic rejection and preservation of unrelated clients and shared templates",
+      "status": "passed"
+    },
+    {
+      "name": "Client deletion: standalone clients and the last client can be removed without reseeding",
+      "status": "passed"
+    },
+    {
+      "name": "Pricing: additive minor-unit totals, removal, discounts and invalid values",
+      "status": "passed"
+    },
+    {
+      "name": "Pricing: catalog edits and draft edits do not change existing or published quotes",
+      "status": "passed"
+    },
+    {
+      "name": "App runtime: required/type validation, create rules, notes, edits and client isolation",
+      "status": "passed"
+    },
+    {
+      "name": "Fresh browser shows empty management overview and one creation flow with optional frameworks, without sample clients",
+      "status": "passed"
+    },
+    {
+      "name": "Management overview preserves saved legacy clients and projects during upgrade",
+      "status": "passed"
+    },
+    {
+      "name": "App library requires explicit project selection and adds apps to the chosen project",
+      "status": "passed"
+    },
+    {
+      "name": "Client dialogs keep header/actions clickable across short, narrow and mobile viewports; fields scroll without losing values or hiding validation",
+      "status": "passed"
+    },
+    {
+      "name": "Client directory creates standalone profiles, edits details, safely renders notes, searches contacts and persists reloads",
+      "status": "passed"
+    },
+    {
+      "name": "New project defaults to blank and explains category starter module/price selections",
+      "status": "passed"
+    },
+    {
+      "name": "App selection changes only the selected client draft and live preview",
+      "status": "passed"
+    },
+    {
+      "name": "Brand edits persist per client without changing another demo client",
+      "status": "passed"
+    },
+    {
+      "name": "Entity/field creation updates the client form preview",
+      "status": "passed"
+    },
+    {
+      "name": "Saving a demo version reports success; View saved version opens the snapshot and distinguishes later draft edits across reloads",
+      "status": "passed"
+    },
+    {
+      "name": "New project links to an existing client and starts from a pristine framework without other project customizations",
+      "status": "passed"
+    },
+    {
+      "name": "One client has multiple independent projects; project search, metadata editing and reopening update only the selected project",
+      "status": "passed"
+    },
+    {
+      "name": "App category filters and client search work",
+      "status": "passed"
+    },
+    {
+      "name": "Customer storefront and standalone platform website previews open and navigate",
+      "status": "passed"
+    },
+    {
+      "name": "Uploaded logo renders on the storefront and remains client-specific",
+      "status": "passed"
+    },
+    {
+      "name": "Create custom app and design a typed required field without code or prompts",
+      "status": "passed"
+    },
+    {
+      "name": "Visual pages render safely; forms save/edit records and on-create rules execute",
+      "status": "passed"
+    },
+    {
+      "name": "Reusable custom app brings schema/rules to another client without copying records",
+      "status": "passed"
+    },
+    {
+      "name": "Project totals react to selection, overrides and discounts; quotes publish and survive reload independently",
+      "status": "passed"
+    },
+    {
+      "name": "Management overview, client profile/dialog, project hub/editor, library and app designer fit a 390px mobile viewport",
+      "status": "passed"
+    },
+    {
+      "name": "Empty directory survives reload and nested client creation resumes project setup without losing inputs",
+      "status": "passed"
+    },
+    {
+      "name": "Client list provides direct editing and deletion; cancelling keeps data, standalone deletion persists and preserves the active unrelated project",
+      "status": "passed"
+    },
+    {
+      "name": "Client deletion requires project confirmation, survives storage errors atomically, clears stale selections and preserves other clients and reusable apps after reload",
+      "status": "passed"
+    },
+    {
+      "name": "Deleting every client and project leaves a usable empty directory after reload without restoring demo seeds",
+      "status": "passed"
+    },
+    {
+      "name": "Project management supports daily app use, retained version previews, archive/reactivate, pending-change filters and independent project deletion on desktop/mobile",
+      "status": "passed"
+    },
+    {
+      "name": "Shared data explains entity/field/record, confirms deletion, survives storage failure and reload, preserves publications and recovers from no entities",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile app can be selected from a starter or catalog, edited visually, previewed in a phone layout and used for persistent local records",
+      "status": "passed"
+    },
+    {
+      "name": "Local server limits exposed files/methods; no browser runtime errors",
+      "status": "passed"
+    }
+  ],
+  "browserErrors": [],
+  "screenshots": 20
+}

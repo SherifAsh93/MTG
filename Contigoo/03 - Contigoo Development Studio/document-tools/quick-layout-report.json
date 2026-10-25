@@ -1,0 +1,25 @@
+{
+  "document": "CONTIGOO_QUICK_GUIDE",
+  "pages": 3,
+  "layout": [
+    {
+      "page": 1,
+      "height": 960,
+      "usedHeight": 933,
+      "overflowElements": []
+    },
+    {
+      "page": 2,
+      "height": 960,
+      "usedHeight": 934,
+      "overflowElements": []
+    },
+    {
+      "page": 3,
+      "height": 960,
+      "usedHeight": 960,
+      "overflowElements": []
+    }
+  ],
+  "overflow": []
+}

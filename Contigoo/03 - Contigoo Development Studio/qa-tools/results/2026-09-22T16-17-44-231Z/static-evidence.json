@@ -1,0 +1,32 @@
+{
+  "verifiedAt": "2026-09-22T15:49:25.811Z",
+  "prefix": "/contigoo-studio-demo/",
+  "files": [
+    "index.html",
+    "app.js",
+    "model.js",
+    "builder-model.js",
+    "studio-ui.js",
+    "styles.css",
+    "studio.css",
+    "assets/logo.png",
+    "assets/inter.woff2",
+    "assets/fraunces.woff2",
+    "assets/Inter-OFL.txt",
+    "assets/Fraunces-OFL.txt",
+    ".nojekyll"
+  ],
+  "checks": [
+    "Repository-subpath asset/module loading",
+    "Standalone client profile creation",
+    "Client editing and confirmed related-project deletion",
+    "Linked blank-first project creation",
+    "Project search and reopening",
+    "Module selection and pricing",
+    "Visual editing and record preview",
+    "Standalone website logo",
+    "No browser/asset errors",
+    "No private/development files exposed"
+  ],
+  "errors": []
+}

@@ -1,0 +1,77 @@
+{
+  "document": "CONTIGOO_STUDIO_NOTES.pdf",
+  "verifiedAt": "2026-09-22T11:44:11.920Z",
+  "sha256": "301c7adb93ef52723891d7505b5f99749b1d36d3faf7e7e608dc9a7269be5963",
+  "bytes": 344010,
+  "pages": 4,
+  "expectedPages": 4,
+  "applicationTests": "Not run — this validates the document only.",
+  "pageChecks": [
+    {
+      "page": 1,
+      "characters": 2437,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 2,
+      "characters": 2395,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 3,
+      "characters": 2893,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 4,
+      "characters": 3105,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "N1",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "N2",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "N3",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "N4",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "N5",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "N6",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    }
+  ]
+}

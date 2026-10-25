@@ -1,0 +1,24 @@
+{
+  "name": "contigoo-database-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Private hosted PostgreSQL readiness tooling; not the Studio backend.",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "test": "node --test remote.test.mjs",
+    "check:remote": "node --env-file=.env remote.mjs",
+    "db:status": "node status-hosted.mjs",
+    "db:migrate:test": "node migrate.mjs test",
+    "db:migrate:dev": "node migrate.mjs development",
+    "test:hosted": "node verify-hosted.mjs"
+  },
+  "dependencies": { "pg": "8.23.0" },
+  "devDependencies": { "neon": "5.0.1" },
+  "overrides": {
+    "neon": {
+      "@hono/node-server": "2.0.10",
+      "diff": "5.2.2"
+    }
+  }
+}

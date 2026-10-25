@@ -1,0 +1,540 @@
+{
+  "document": "CONTIGOO_PLATFORM_BLUEPRINT.pdf",
+  "verifiedAt": "2026-09-21T21:32:51.657Z",
+  "sha256": "4e5e31dd2b6c37771c5cc18e26aa531e1cdc0638ba65909893ee8258797cd89f",
+  "bytes": 1215548,
+  "pages": 34,
+  "expectedPages": 34,
+  "applicationTests": "Not run — this validates the document only.",
+  "pageChecks": [
+    {
+      "page": 1,
+      "characters": 842,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 2,
+      "characters": 2165,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 3,
+      "characters": 2489,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 4,
+      "characters": 2554,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 5,
+      "characters": 2664,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 6,
+      "characters": 2091,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 7,
+      "characters": 2353,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 8,
+      "characters": 2845,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 9,
+      "characters": 2849,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 10,
+      "characters": 2783,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 11,
+      "characters": 2709,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 12,
+      "characters": 2684,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 13,
+      "characters": 2684,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 14,
+      "characters": 2547,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 15,
+      "characters": 2432,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 16,
+      "characters": 2419,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 17,
+      "characters": 2447,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 18,
+      "characters": 2422,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 19,
+      "characters": 2554,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 20,
+      "characters": 2496,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 21,
+      "characters": 2544,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 22,
+      "characters": 2965,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 23,
+      "characters": 2976,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 24,
+      "characters": 3094,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 25,
+      "characters": 3162,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 26,
+      "characters": 3374,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 27,
+      "characters": 3260,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 28,
+      "characters": 2435,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 29,
+      "characters": 2119,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 30,
+      "characters": 2667,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 31,
+      "characters": 2586,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 32,
+      "characters": 2665,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 33,
+      "characters": 2330,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    },
+    {
+      "page": 34,
+      "characters": 2442,
+      "widthPt": 594.95996,
+      "heightPt": 841.91998,
+      "textWithinPage": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "T01",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T02",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T03",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T04",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T05",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T06",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T07",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T08",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T09",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T10",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T11",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T12",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T13",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T14",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T15",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T16",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T17",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T18",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T19",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T20",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T21",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T22",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T23",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T24",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T25",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T26",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T27",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T28",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T29",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T30",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T31",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T32",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T33",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T34",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T35",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T36",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T37",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T38",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T39",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T40",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T41",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T42",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T43",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T44",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T45",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T46",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T47",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    },
+    {
+      "id": "T48",
+      "definitionCount": 1,
+      "presentInPdf": true,
+      "execution": "Not run"
+    }
+  ],
+  "contentsLinks": 32
+}

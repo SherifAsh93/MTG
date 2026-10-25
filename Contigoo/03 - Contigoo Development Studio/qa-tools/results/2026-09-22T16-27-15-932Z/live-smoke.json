@@ -1,0 +1,18 @@
+{
+  "status": "Passed",
+  "verifiedOn": "2026-09-22",
+  "sourceCommit": "7b1d376c2563b61fbd433a435c4e3cf25c14bd9c",
+  "url": "https://sherifash93.github.io/contigoo-studio-demo/",
+  "command": "node C:\\Users\\sheri\\AppData\\Local\\Temp\\opencode\\verify-contigoo-live.mjs",
+  "checks": [
+    "Live core HTML/JS/CSS exactly match the local static build",
+    "Approved subtitle and restored connected-apps banner are present",
+    "Desktop/mobile layout and short client-dialog actions are usable",
+    "Client/project creation, app records and pricing work in an isolated browser context",
+    "Save demo version and direct saved snapshot preview work",
+    "Archive/reactivate, shared entity/field deletion and Mobile app records work",
+    "Private/development document paths return 404",
+    "No unexpected browser or asset errors in the smoke journey"
+  ],
+  "scope": "Functional public-demo smoke only; not a production security or load test. Synthetic data stayed in the temporary browser context."
+}

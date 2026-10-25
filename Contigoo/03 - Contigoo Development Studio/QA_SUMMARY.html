@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contigoo Studio — QA results</title><style>
+@font-face{font-family:Inter;src:url('prototype/assets/inter.woff2')}@font-face{font-family:Fraunces;src:url('prototype/assets/fraunces.woff2')}
+*{box-sizing:border-box}body{margin:0;background:#f4f0e9;color:#30312e;font:14px/1.6 Inter,Arial,sans-serif}
+main{max-width:1200px;margin:auto;padding:32px 24px 60px}header{display:flex;gap:24px;align-items:center;border-bottom:1px solid #dcd5c9;padding-bottom:22px}
+header img{width:145px}header p{margin:0;color:#746f65}h1,h2{font-family:Fraunces,Georgia,serif;line-height:1.2}h1{font-size:37px;margin:26px 0 10px}h2{font-size:25px}
+p{color:#746f65}.kicker{color:#916b3d;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}
+.card,section{background:#fffdf9;border:1px solid #dcd5c9;border-radius:12px;padding:22px;min-width:0}.card strong{display:block;font:36px Fraunces,Georgia,serif}.card span{color:#746f65}
+.pass{color:#3d7148}.fail{color:#a44232}.pending{color:#916b3d}section{margin:18px 0}a{color:#79552c}nav{display:flex;flex-wrap:wrap;gap:18px}.table-wrap{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:12px;border-bottom:1px solid #e1dbcf;text-align:left;vertical-align:top}th{background:#edece2}code{font-size:11px;overflow-wrap:anywhere}
+li{margin-bottom:10px}summary{cursor:pointer;font-weight:600;margin-bottom:12px}footer{font-size:12px;color:#746f65;margin-top:25px}
+@media(max-width:720px){main{padding:20px 14px}.cards{grid-template-columns:repeat(2,1fr)}header{align-items:flex-start;flex-direction:column}h1{font-size:30px}section{padding:17px}}
+@media print{body{background:white}.card,section{break-inside:avoid}.cards{grid-template-columns:repeat(4,1fr)}}
+</style></head><body><main>
+<header><img src="prototype/assets/logo.png" alt="Contigoo"><div><strong>Contigoo Studio</strong><p>Internal Management &amp; Development Platform · QA audit</p></div></header>
+<p class="kicker">Evidence-based review · 22 September 2026</p><h1>QA results and next priorities</h1>
+<p>Tested build <code>7b1d376c2563b61fbd433a435c4e3cf25c14bd9c</code><br>Final audit <code>2026-09-22T16-27-15-932Z</code> · Edg/153.0.4234.48</p>
+<div class="cards">
+<div class="card"><strong>192</strong><span>Combined recorded checks</span></div>
+<div class="card"><strong class="pass">184</strong><span>Passed</span></div>
+<div class="card"><strong class="fail">8</strong><span>Failed · 5 defects</span></div>
+<div class="card"><strong class="pending">33</strong><span>Deferred cases</span></div>
+</div>
+<section><h2>What these results mean</h2>
+<p>The existing suite passed 48 of 48 checks. The expanded audit ran 144 cases (136 passed, 8 failed). Static repository-subpath checks passed (2026-09-22T15:49:25.811Z). The live GitHub Pages smoke test passed for this build on 2026-09-22.</p>
+<p>Recorded results from 22 September 2026; generating this summary is not a new application test run. Some coverage overlaps between suites. All tests used isolated synthetic data. These results do not certify real authentication, databases, standalone generation or native mobile delivery.</p>
+<nav><a href="QA_TEST_CASES.md">Test cases</a><a href="QA_EXECUTION_REPORT.md">Full execution report</a><a href="QA_DEFECTS.md">Defects and reproduction</a><a href="qa-tools/results/2026-09-22T16-27-15-932Z/results.json">Raw evidence</a></nav></section>
+<section><h2>Five confirmed open defects</h2><ol>
+<li><strong class="fail">High — Storage errors are followed by success messages</strong><br>Four failing cases: client creation, project creation, record saving and default prices.</li>
+<li><strong class="fail">High — Two-tab editing loses an earlier change</strong><br>A stale second tab overwrites the first tab’s newly created client.</li>
+<li><strong class="pending">Medium — Tablet App library overflows horizontally</strong><br>781px content in a 768px viewport; the last category button crosses the edge.</li>
+<li><strong class="pending">Medium — Malformed stored state crashes startup</strong><br>An invalid project shape results in a blank app without a recovery screen.</li>
+<li><strong class="pending">Medium — Unknown schema resets the active workspace silently</strong><br>A raw backup existed in the test, but no version/recovery message was shown.</li>
+</ol><p><strong>Recommended priority:</strong> address failed-save feedback and lost updates first, then tablet layout and stored-data recovery. Rerun the audit after fixes. Backend work awaits an approved remote/cloud environment.</p></section>
+<section><h2>What was exercised</h2><ul><li>All 10 starting points and generic record create/read/edit/delete for all 13 catalog modules.</li>
+<li>Client/profile/project management, search, selection, archiving/reactivation and deletion.</li>
+<li>Entities/fields, supported field types, pages, ordering, visibility, dependent rules, templates and snapshot previews.</li>
+<li>Pricing/defaults/discounts, quote-export payload, branding and PNG/JPEG/WebP upload success/rejection.</li>
+<li>Reloads, injected storage failures, two-tab editing, malformed/unsupported stored state and five viewport sizes.</li>
+<li>Literal rendering of HTML-like input and limited keyboard/dialog operations. Full security, browser/device and accessibility certification are not claimed.</li></ul></section>
+<section><h2>Coverage by area</h2><p>31 planned cases are not implemented; 2 require additional manual/browser environments.</p>
+<div class="table-wrap"><table><thead><tr><th>Area</th><th>Cases</th><th>Passed</th><th>Failed</th></tr></thead><tbody>
+<tr><td>Startup</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Migration</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Clients</td><td>22</td><td class="pass">22</td><td class="">0</td></tr>
+<tr><td>Projects</td><td>10</td><td class="pass">10</td><td class="">0</td></tr>
+<tr><td>Shared data</td><td>3</td><td class="pass">3</td><td class="">0</td></tr>
+<tr><td>Starters</td><td>20</td><td class="pass">20</td><td class="">0</td></tr>
+<tr><td>App builder</td><td>5</td><td class="pass">5</td><td class="">0</td></tr>
+<tr><td>Records</td><td>18</td><td class="pass">18</td><td class="">0</td></tr>
+<tr><td>Workflows</td><td>4</td><td class="pass">4</td><td class="">0</td></tr>
+<tr><td>Templates</td><td>2</td><td class="pass">2</td><td class="">0</td></tr>
+<tr><td>Pricing</td><td>15</td><td class="pass">15</td><td class="">0</td></tr>
+<tr><td>Versions</td><td>2</td><td class="pass">2</td><td class="">0</td></tr>
+<tr><td>Navigation</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Built-in app runtime</td><td>13</td><td class="pass">13</td><td class="">0</td></tr>
+<tr><td>Custom apps</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>App entities</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>App fields</td><td>2</td><td class="pass">2</td><td class="">0</td></tr>
+<tr><td>Pages</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Branding</td><td>6</td><td class="pass">6</td><td class="">0</td></tr>
+<tr><td>Role preview</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Concept previews</td><td>1</td><td class="pass">1</td><td class="">0</td></tr>
+<tr><td>Responsive layout</td><td>5</td><td class="pass">4</td><td class="fail">1</td></tr>
+<tr><td>Persistence failure</td><td>6</td><td class="pass">1</td><td class="fail">5</td></tr>
+<tr><td>Recovery</td><td>3</td><td class="pass">1</td><td class="fail">2</td></tr>
+</tbody></table></div></section>
+<section><details><summary>All 144 expanded results</summary><div class="table-wrap"><table><thead><tr><th>ID</th><th>Scenario</th><th>Result</th></tr></thead><tbody>
+<tr data-test-status="Passed"><td><code>M-START-01</code></td><td>Empty first workspace and idempotent enhancement</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MIGRATE-01</code></td><td>Legacy records and publication survive upgrade</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-name-MAX</code></td><td>name: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-name-OVER</code></td><td>name: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-industry-MAX</code></td><td>industry: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-industry-OVER</code></td><td>industry: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-contact-MAX</code></td><td>contact: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-contact-OVER</code></td><td>contact: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-email-MAX</code></td><td>email: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-email-OVER</code></td><td>email: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-phone-MAX</code></td><td>phone: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-phone-OVER</code></td><td>phone: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-address-MAX</code></td><td>address: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-address-OVER</code></td><td>address: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-notes-MAX</code></td><td>notes: maximum accepted length</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-notes-OVER</code></td><td>notes: over-limit rejected atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-EMPTY</code></td><td>Blank client name is rejected</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-SPACE</code></td><td>Blank client name is rejected</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-EMAIL</code></td><td>Invalid contact email does not mutate an existing client</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-DUP</code></td><td>Same client names retain distinct identities</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CLIENT-DELETE</code></td><td>Client cascade requires consent and preserves other state</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-OWNER</code></td><td>Invalid project owner</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-NAME</code></td><td>Invalid project name</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-NAME-LONG</code></td><td>Invalid project name-long</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-DESC-LONG</code></td><td>Invalid project desc-long</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-STARTER</code></td><td>Invalid project starter</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-MAX</code></td><td>Maximum project name/description and independent branding</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-ARCHIVE</code></td><td>Archive/reactivate retains versions and records</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-PROJECT-DELETE</code></td><td>Delete one project without deleting its owner</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-SHARED-LIMITS</code></td><td>Entity/field boundaries and duplicate validation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-SHARED-DELETE</code></td><td>Deleting all shared entities keeps app data and saved snapshots</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-blank</code></td><td>Start from scratch: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-crm-framework</code></td><td>CRM: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-erp-framework</code></td><td>ERP / Business suite: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-finance-framework</code></td><td>Finance: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-inventory-framework</code></td><td>Inventory &amp; Operations: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-hr-framework</code></td><td>HR &amp; People: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-commerce-framework</code></td><td>Website &amp; E-commerce: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-service-framework</code></td><td>Service &amp; Support: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-workflow-framework</code></td><td>Custom workflows: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-STARTER-mobile-framework</code></td><td>Mobile app: independent configuration</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-CUSTOM-INVALID</code></td><td>Duplicate custom app and invalid pricing reject atomically</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-APP-ENTITY</code></td><td>New app entity creates independent fields/list</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-APP-FIELDS</code></td><td>Choice normalization and invalid schema references</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-APP-PAGES</code></td><td>All page types and invalid page definitions</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-APP-MOVE</code></td><td>Ordering stays stable at boundaries</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-TEXT</code></td><td>Text typed record value (TEXT)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-NUMBER</code></td><td>Number typed record value (NUMBER)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-NUMBER-INVALID</code></td><td>Number invalid value (NUMBER)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-NUMBER-ZERO</code></td><td>Number typed record value (NUMBER-ZERO)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-NUMBER-ZERO-INVALID</code></td><td>Number invalid value (NUMBER-ZERO)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-EMAIL</code></td><td>Email typed record value (EMAIL)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-EMAIL-INVALID</code></td><td>Email invalid value (EMAIL)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-DATE</code></td><td>Date typed record value (DATE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-DATE-INVALID</code></td><td>Date invalid value (DATE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-DATE-OVERFLOW</code></td><td>Date typed record value (DATE-OVERFLOW)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-DATE-OVERFLOW-INVALID</code></td><td>Date invalid value (DATE-OVERFLOW)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-CHOICE</code></td><td>Choice typed record value (CHOICE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-CHOICE-INVALID</code></td><td>Choice invalid value (CHOICE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-BOOL-TRUE</code></td><td>Yes / No typed record value (BOOL-TRUE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-BOOL-FALSE</code></td><td>Yes / No typed record value (BOOL-FALSE)</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-REQUIRED</code></td><td>Missing and whitespace required values reject</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RECORD-SCOPE</code></td><td>Unknown input fields and disabled modules</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RULES-ORDER</code></td><td>Ordered conditional rules, disabled rules and edit semantics</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RULES-INVALID</code></td><td>Invalid rules are rejected before insertion</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-RULES-ATOMIC</code></td><td>Rule failure does not partially create records/logs</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-TEMPLATE-REUSE</code></td><td>Saved template copies configuration but not records/prices</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-ZERO</code></td><td>Valid money 0</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-CENT</code></td><td>Valid money 0.01</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-DECIMAL</code></td><td>Valid money 123.45</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-MAX</code></td><td>Valid money 9999999.99</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-NEGATIVE</code></td><td>Reject unsupported money negative</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-PRECISION</code></td><td>Reject unsupported money precision</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-EXPONENT</code></td><td>Reject unsupported money exponent</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-NAN</code></td><td>Reject unsupported money nan</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-INFINITY</code></td><td>Reject unsupported money infinity</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-EMPTY</code></td><td>Reject unsupported money empty</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-MONEY-MAX-OVER</code></td><td>Reject unsupported money max-over</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-QUOTE-DISCOUNT</code></td><td>Zero/full discount and setup separation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-QUOTE-SNAPSHOT</code></td><td>Default/project/saved price independence</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>M-VERSIONS</code></td><td>Repeated versioning preserves earlier schema snapshots</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-NAV-01</code></td><td>Overview, navigation, branding and client/project searches</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-CLIENT-01</code></td><td>Create/view/edit/cancel/delete a standalone client</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-CLIENT-02</code></td><td>Client validation and safe text rendering</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-CLIENT-03</code></td><td>Cascade deletion lists projects and respects cancellation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-blank</code></td><td>Create through Start from scratch</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-crm-framework</code></td><td>Create through CRM</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-erp-framework</code></td><td>Create through ERP / Business suite</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-finance-framework</code></td><td>Create through Finance</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-inventory-framework</code></td><td>Create through Inventory &amp; Operations</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-hr-framework</code></td><td>Create through HR &amp; People</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-commerce-framework</code></td><td>Create through Website &amp; E-commerce</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-service-framework</code></td><td>Create through Service &amp; Support</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-workflow-framework</code></td><td>Create through Custom workflows</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTER-mobile-framework</code></td><td>Create through Mobile app</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-PROJECT-01</code></td><td>New-project validation and nested client cancellation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-PROJECT-02</code></td><td>Project details, archive/reactivate and deletion</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-crm</code></td><td>CRM: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-inventory</code></td><td>Inventory: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-commerce</code></td><td>E-commerce: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-management</code></td><td>Management: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-projects</code></td><td>Projects: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-finance</code></td><td>Finance: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-hr</code></td><td>People &amp; HR: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-helpdesk</code></td><td>Helpdesk: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-appointments</code></td><td>Appointments: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-website</code></td><td>Website &amp; CMS: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-marketing</code></td><td>Marketing: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-analytics</code></td><td>Analytics: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-MODULE-mobile</code></td><td>Mobile app: select/edit/create/update/delete record</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-CUSTOM-01</code></td><td>Create custom app and reject duplicate name</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-SHARED-01</code></td><td>Create field types, delete a field/entity and recover an empty model</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-ENTITY-01</code></td><td>Add/switch app entity and use its generated list</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-FIELDS-01</code></td><td>Field add/rename/duplicate/order/required/visibility/delete controls</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-FIELDS-02</code></td><td>Optional hidden values survive record editing</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-PAGES-01</code></td><td>Add/edit/reorder/preview/delete pages and rename app</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-RULES-01</code></td><td>Conditional set/note rules, disable/delete and dependent field protection</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-RECORDS-01</code></td><td>Typed browser fields and native required/email validation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-TEMPLATES-01</code></td><td>Save reusable template and install in a fresh project</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-PRICING-01</code></td><td>Default price list vs existing projects and future selections</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-PRICING-02</code></td><td>App override, base amounts, discount, deselection and JSON export</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-BRAND-01</code></td><td>Name/tagline/color/logo persist with safe rendering and per-project scope</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LOGO-validJpeg</code></td><td>Accept image/jpeg upload</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LOGO-validWebp</code></td><td>Accept image/webp upload</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LOGO-invalidMime</code></td><td>Reject unsupported file type</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LOGO-tooLarge</code></td><td>Reject over 1 MB</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LOGO-corruptPng</code></td><td>Reject corrupt image bytes</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-VERSIONS-01</code></td><td>Save/view versions, preview draft, reload and no-app validation</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-ACCESS-PREVIEW</code></td><td>Administrator/Member/Viewer change only the displayed demo role</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-CONCEPT-PREVIEWS</code></td><td>Website/storefront navigation and Escape</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LAYOUT-320x568</code></td><td>Operational layouts at 320×568</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LAYOUT-390x500</code></td><td>Operational layouts at 390×500</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Failed"><td><code>B-LAYOUT-768x1024</code></td><td>Operational layouts at 768×1024</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LAYOUT-1024x664</code></td><td>Operational layouts at 1024×664</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Passed"><td><code>B-LAYOUT-1440x900</code></td><td>Operational layouts at 1440×900</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-client-create</code></td><td>Storage failure during client-create is not reported as persisted success</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-project-create</code></td><td>Storage failure during project-create is not reported as persisted success</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-record-save</code></td><td>Storage failure during record-save is not reported as persisted success</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-default-prices</code></td><td>Storage failure during default-prices is not reported as persisted success</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STORAGE-VERSION</code></td><td>Saved-version storage failure is atomic and explicit</td><td class="pass">Passed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-MULTITAB</code></td><td>Two tabs must not silently overwrite each other</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-CORRUPT</code></td><td>Structurally invalid saved state has a usable recovery path</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Failed"><td><code>B-STORAGE-FUTURE</code></td><td>Unrecognized saved schema is not silently replaced</td><td class="fail">Failed</td></tr>
+<tr data-test-status="Passed"><td><code>B-STARTUP-STORAGE-DENIED</code></td><td>Initial storage denial still renders the workspace</td><td class="pass">Passed</td></tr>
+</tbody></table></div></details></section>
+<section><details><summary>33 deferred cases</summary><div class="table-wrap"><table><thead><tr><th>ID</th><th>Scenario</th><th>Status</th><th>Reason</th></tr></thead><tbody>
+<tr><td><code>P-AUTH-01</code></td><td>Sole owner bootstrap</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-AUTH-02</code></td><td>Username/email/phone login</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-AUTH-03</code></td><td>Invalid credentials and throttling</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-AUTH-04</code></td><td>Session lifecycle</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-AUTH-05</code></td><td>Recovery and identifier changes</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-USERS-01</code></td><td>Create/update/disable/delete employees</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-USERS-02</code></td><td>Privilege escalation and mass assignment</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-ACCESS-01</code></td><td>Unassigned client/project access</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-ACCESS-02</code></td><td>Studio versus generated-app identities</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-ACCESS-03</code></td><td>Client record creates no Studio account</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-DB-01</code></td><td>Real persistence and transactions</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-DB-02</code></td><td>Concurrent updates and scoped references</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-DB-03</code></td><td>Database provisioning policy</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-GEN-01</code></td><td>Visual model to standalone web app</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-GEN-02</code></td><td>Client credential handoff</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-GEN-03</code></td><td>Upgrade and rollback</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-GEN-04</code></td><td>Reusable package privacy</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-MOBILE-01</code></td><td>Android/iOS build and installation</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-MOBILE-02</code></td><td>Installation, offline and sync</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-FILES-01</code></td><td>Server upload/download authorization</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-AI-01</code></td><td>Real structured edit provider</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-DOMAIN-01</code></td><td>Inventory/order invariants</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-DOMAIN-02</code></td><td>Finance/HR correctness</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-BILLING-01</code></td><td>Real payment/entitlement changes</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-OPS-01</code></td><td>HTTPS/restart/backup restoration</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-OPS-02</code></td><td>Operational evidence</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-PERF-01</code></td><td>Concurrent capacity and limits</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-BUILDER-ENTITY</code></td><td>App-specific entity rename/delete</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-BUILDER-RULE</code></td><td>Edit existing workflow</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-TRANSFER-01</code></td><td>Full workspace export/import</td><td class="pending">Not implemented</td><td>Required implementation or delivery contract is absent; no pass claimed.</td></tr>
+<tr><td><code>P-CROSS-BROWSER</code></td><td>Firefox/Safari and physical iOS/Android</td><td class="pending">Not run</td><td>This pass uses installed Chromium-based Edge only; other engines/physical devices are unavailable.</td></tr>
+<tr><td><code>P-ACCESSIBILITY</code></td><td>Assistive technology and full WCAG review</td><td class="pending">Not run</td><td>Automated viewport and limited keyboard checks are not a full accessibility certification.</td></tr>
+<tr><td><code>P-L10N</code></td><td>Arabic/RTL and localization</td><td class="pending">Not implemented</td><td>Localized/RTL interface and locale requirements are not implemented/approved.</td></tr>
+</tbody></table></div></details></section>
+<footer>Finite, risk-based coverage of this build—not a claim that every possible combination or future feature has been tested. Raw results and earlier runs are retained in qa-tools/results.</footer>
+</main></body></html>

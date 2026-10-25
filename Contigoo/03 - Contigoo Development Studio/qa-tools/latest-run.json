@@ -1,0 +1,10 @@
+{
+  "runId": "2026-09-22T16-27-15-932Z",
+  "path": "qa-tools/results/2026-09-22T16-27-15-932Z",
+  "counts": {
+    "passed": 136,
+    "failed": 8,
+    "deferred": 33
+  },
+  "sourceCommit": "7b1d376c2563b61fbd433a435c4e3cf25c14bd9c"
+}

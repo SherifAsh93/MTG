@@ -1,0 +1,384 @@
+{
+  "runId": "2026-09-22T16-17-44-153Z",
+  "sourceCommit": "7b1d376c2563b61fbd433a435c4e3cf25c14bd9c",
+  "workingTreeAtStart": "clean",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "browser": "Edg/153.0.4234.48"
+  },
+  "scope": "Prototype QA only; no production access/security/domain acceptance claims",
+  "counts": {
+    "passed": 1,
+    "failed": 0,
+    "deferred": 33
+  },
+  "results": [
+    {
+      "id": "B-CONCEPT-PREVIEWS",
+      "area": "Concept previews",
+      "title": "Website/storefront navigation and Escape",
+      "steps": "Open public-site concept; navigate to app section/Studio; preview a commerce project and click collection.",
+      "expected": "Concept links/close controls work; no checkout or real deployment is falsely performed.",
+      "layer": "Browser",
+      "severity": "Medium",
+      "status": "Passed",
+      "actual": "All assertions for the listed expected result passed.",
+      "durationMs": 1439
+    }
+  ],
+  "deferred": [
+    {
+      "id": "P-AUTH-01",
+      "area": "Studio authentication",
+      "title": "Sole owner bootstrap",
+      "steps": "Provision the owner twice and attempt a second Super Admin through an employee API.",
+      "expected": "Exactly one designated owner; no hardcoded password or employee escalation.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-AUTH-02",
+      "area": "Studio authentication",
+      "title": "Username/email/phone login",
+      "steps": "Sign in by each verified identifier using the same account password; test case/phone normalization and collisions.",
+      "expected": "All valid aliases resolve to one immutable identity; ambiguous/unverified aliases are rejected.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-AUTH-03",
+      "area": "Studio authentication",
+      "title": "Invalid credentials and throttling",
+      "steps": "Try wrong passwords, unknown identifiers and repeated failures.",
+      "expected": "Generic errors, rate limits and auditable failures; no account enumeration.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-AUTH-04",
+      "area": "Studio authentication",
+      "title": "Session lifecycle",
+      "steps": "Login, logout, expire and revoke a session; replay the old cookie/token.",
+      "expected": "Expired/revoked sessions cannot read or write protected data.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-AUTH-05",
+      "area": "Studio authentication",
+      "title": "Recovery and identifier changes",
+      "steps": "Request/reset password; change verified email/phone; replay expired/reused recovery tokens.",
+      "expected": "Ownership verified; single-use tokens; prior compromised sessions invalidated as designed.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-USERS-01",
+      "area": "Employee management",
+      "title": "Create/update/disable/delete employees",
+      "steps": "Owner provisions an employee, changes assigned role, suspends and removes access.",
+      "expected": "Employee receives only explicit grants; changes are audited and sessions revoked appropriately.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-USERS-02",
+      "area": "Employee management",
+      "title": "Privilege escalation and mass assignment",
+      "steps": "Employee attempts owner/developer/admin actions and adds privileged fields to API requests.",
+      "expected": "Server denies actions; sensitive attributes are not writable through ordinary employee operations.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-ACCESS-01",
+      "area": "Authorization",
+      "title": "Unassigned client/project access",
+      "steps": "As employee A, enumerate/request/update/delete B records through API, exports, files and jobs.",
+      "expected": "No unassigned data leakage or mutation; checks are server-side.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-ACCESS-02",
+      "area": "Authorization",
+      "title": "Studio versus generated-app identities",
+      "steps": "Use generated-client credentials against Studio APIs and employee credentials outside assigned app scope.",
+      "expected": "The two identity/access boundaries are enforced.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-ACCESS-03",
+      "area": "Authorization",
+      "title": "Client record creates no Studio account",
+      "steps": "Create a client profile and attempt Studio login with its contact identifiers.",
+      "expected": "No account or invitation is implicitly created.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-DB-01",
+      "area": "Database",
+      "title": "Real persistence and transactions",
+      "steps": "Create/edit/delete data, restart API/database services, inject a transaction failure.",
+      "expected": "Committed data survives; failed operations roll back without partial state.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-DB-02",
+      "area": "Database",
+      "title": "Concurrent updates and scoped references",
+      "steps": "Race writes/uniqueness changes; attempt cross-project foreign-key links.",
+      "expected": "Conflicts are handled; no lost updates or cross-scope references.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-DB-03",
+      "area": "Database",
+      "title": "Database provisioning policy",
+      "steps": "Provision two standalone solutions under the approved project/module/user isolation policy.",
+      "expected": "Distinct credentials/scopes and migration ownership match the confirmed policy.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-GEN-01",
+      "area": "Standalone generator",
+      "title": "Visual model to standalone web app",
+      "steps": "Create data/pages/rules/access visually; generate and deploy the runtime at a separate URL.",
+      "expected": "Delivered app works independently; visual metadata drives actual validation and access.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-GEN-02",
+      "area": "Standalone generator",
+      "title": "Client credential handoff",
+      "steps": "Provision initial app users, sign in on a second device and revoke access.",
+      "expected": "Secure initial access works only in the intended delivered app; secrets are absent from frontend artifacts.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-GEN-03",
+      "area": "Standalone generator",
+      "title": "Upgrade and rollback",
+      "steps": "Update a generated app with existing records; inject publication/migration failure and roll back.",
+      "expected": "Prior valid deployment remains usable; records and deliberate overrides survive.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-GEN-04",
+      "area": "Standalone generator",
+      "title": "Reusable package privacy",
+      "steps": "Generate a second client app from a template and inspect artifacts/DB/files.",
+      "expected": "Only reusable configuration is copied; client records, tokens and credentials are not.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-MOBILE-01",
+      "area": "Native mobile delivery",
+      "title": "Android/iOS build and installation",
+      "steps": "Build the selected native targets, sign/install and exercise device features.",
+      "expected": "Valid installable packages and correct API/permission behavior on supported devices.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-MOBILE-02",
+      "area": "PWA delivery",
+      "title": "Installation, offline and sync",
+      "steps": "Install supported PWA, work offline, reconnect and resolve concurrent changes.",
+      "expected": "Manifest/service worker/offline consistency and sync policy meet the selected delivery scope.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-FILES-01",
+      "area": "Files",
+      "title": "Server upload/download authorization",
+      "steps": "Upload allowed/disallowed files, exceed quotas, request another project file and expire a download URL.",
+      "expected": "Validation, scope, quotas and expiry are enforced server-side.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-AI-01",
+      "area": "AI integration",
+      "title": "Real structured edit provider",
+      "steps": "Request a change, inspect diff, reject/apply it and verify model/runtime updates.",
+      "expected": "Actual provider path works; changes are validated, reviewable and scoped.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-DOMAIN-01",
+      "area": "Domain engines",
+      "title": "Inventory/order invariants",
+      "steps": "Create/retry/cancel orders and stock movements with concurrent requests.",
+      "expected": "Stock/order effects occur once and obey the approved domain policies.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-DOMAIN-02",
+      "area": "Domain engines",
+      "title": "Finance/HR correctness",
+      "steps": "Execute approved financial/HR workflows with domain edge cases and reviewer-approved expected results.",
+      "expected": "Business invariants, localization and access requirements are satisfied.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-BILLING-01",
+      "area": "Billing",
+      "title": "Real payment/entitlement changes",
+      "steps": "Simulate payment-provider events, replays, grace periods and purchased-app changes.",
+      "expected": "Authentic/idempotent events and server-enforced entitlements; quoted terms match approved prices.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-OPS-01",
+      "area": "VPS operations",
+      "title": "HTTPS/restart/backup restoration",
+      "steps": "Deploy on approved subdomain, restart services, restore off-VPS backups and verify records/files/access.",
+      "expected": "Independent recovery succeeds with measured evidence.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-OPS-02",
+      "area": "Audit/monitoring",
+      "title": "Operational evidence",
+      "steps": "Perform sensitive actions, induce a service failure and inspect logs/alerts/audit access.",
+      "expected": "Actor/scope/action records and actionable alerts are retained without leaking secrets.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-PERF-01",
+      "area": "Production load",
+      "title": "Concurrent capacity and limits",
+      "steps": "Run agreed concurrency/data-volume workloads against the real stack.",
+      "expected": "Latency/resource/error rates meet approved targets; no capacity guarantee inferred from prototype tests.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-BUILDER-ENTITY",
+      "area": "Builder gaps",
+      "title": "App-specific entity rename/delete",
+      "steps": "Rename/delete an app entity with dependent fields/pages/rules and records.",
+      "expected": "Explicit dependency handling and confirmation; currently no such complete app-entity controls.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-BUILDER-RULE",
+      "area": "Builder gaps",
+      "title": "Edit existing workflow",
+      "steps": "Change an existing rule without deleting/recreating it.",
+      "expected": "Existing rule can be edited and validated; current UI only adds, toggles and removes rules.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-TRANSFER-01",
+      "area": "Workspace portability",
+      "title": "Full workspace export/import",
+      "steps": "Export browser workspace, move origin/device, validate/import and verify configurations/records.",
+      "expected": "Whole-state transfer works without merging secrets or overwriting unrelated work; quote export alone is insufficient.",
+      "layer": "Production / future",
+      "status": "Not implemented",
+      "reason": "Required implementation or delivery contract is absent; no pass claimed."
+    },
+    {
+      "id": "P-CROSS-BROWSER",
+      "area": "Browser compatibility",
+      "title": "Firefox/Safari and physical iOS/Android",
+      "steps": "Run supported workflows on the agreed browser/device matrix.",
+      "expected": "Equivalent rendering/input/keyboard/file behavior.",
+      "layer": "Environment",
+      "status": "Not run",
+      "reason": "This pass uses installed Chromium-based Edge only; other engines/physical devices are unavailable."
+    },
+    {
+      "id": "P-ACCESSIBILITY",
+      "area": "Accessibility",
+      "title": "Assistive technology and full WCAG review",
+      "steps": "Use screen readers, keyboard-only navigation, contrast/zoom and focus checks across every flow.",
+      "expected": "Meet an agreed accessibility target with manual evidence.",
+      "layer": "Manual",
+      "status": "Not run",
+      "reason": "Automated viewport and limited keyboard checks are not a full accessibility certification."
+    },
+    {
+      "id": "P-L10N",
+      "area": "Localization",
+      "title": "Arabic/RTL and localization",
+      "steps": "Test translated pages, mixed scripts, dates, numbers and currency.",
+      "expected": "Approved locale requirements are correctly implemented.",
+      "layer": "Future",
+      "status": "Not implemented",
+      "reason": "Localized/RTL interface and locale requirements are not implemented/approved."
+    }
+  ],
+  "regression": {
+    "date": "2026-09-22T15:49:53.251Z",
+    "total": 48,
+    "passed": 48,
+    "browserErrors": []
+  },
+  "staticChecks": {
+    "verifiedAt": "2026-09-22T15:49:25.811Z",
+    "checks": [
+      "Repository-subpath asset/module loading",
+      "Standalone client profile creation",
+      "Client editing and confirmed related-project deletion",
+      "Linked blank-first project creation",
+      "Project search and reopening",
+      "Module selection and pricing",
+      "Visual editing and record preview",
+      "Standalone website logo",
+      "No browser/asset errors",
+      "No private/development files exposed"
+    ],
+    "errors": []
+  }
+}

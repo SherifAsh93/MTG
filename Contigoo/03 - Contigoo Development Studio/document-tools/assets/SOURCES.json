@@ -1,0 +1,23 @@
+{
+  "inspected": "2026-09-21",
+  "assets": [
+    {
+      "name": "contigoo-dark.png",
+      "source": "https://contigoo.com/contigoo-dark.png",
+      "bytes": 39311,
+      "sha256": "cf873036e162348f1de5c43b53742f47d545996236b8f83bb5f07dea236a39a8"
+    },
+    {
+      "name": "inter-latin.woff2",
+      "source": "https://contigoo.com/assets-v20260723/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    },
+    {
+      "name": "fraunces-latin.woff2",
+      "source": "https://contigoo.com/assets-v20260723/_next/static/media/cb9f64d62d112b41-s.p.woff2",
+      "bytes": 120800,
+      "sha256": "94bb7e04bb1a32237a67935c72526e42a3e52ee4aebd50299802b18a93114251"
+    }
+  ]
+}

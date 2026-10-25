@@ -1,0 +1,211 @@
+{
+  "document": "CONTIGOO_PLATFORM_BLUEPRINT",
+  "pages": 34,
+  "layout": [
+    {
+      "page": 1,
+      "height": 960,
+      "usedHeight": 809,
+      "overflowElements": []
+    },
+    {
+      "page": 2,
+      "height": 960,
+      "usedHeight": 692,
+      "overflowElements": []
+    },
+    {
+      "page": 3,
+      "height": 960,
+      "usedHeight": 700,
+      "overflowElements": []
+    },
+    {
+      "page": 4,
+      "height": 960,
+      "usedHeight": 864,
+      "overflowElements": []
+    },
+    {
+      "page": 5,
+      "height": 960,
+      "usedHeight": 842,
+      "overflowElements": []
+    },
+    {
+      "page": 6,
+      "height": 960,
+      "usedHeight": 884,
+      "overflowElements": []
+    },
+    {
+      "page": 7,
+      "height": 960,
+      "usedHeight": 915,
+      "overflowElements": []
+    },
+    {
+      "page": 8,
+      "height": 960,
+      "usedHeight": 944,
+      "overflowElements": []
+    },
+    {
+      "page": 9,
+      "height": 960,
+      "usedHeight": 880,
+      "overflowElements": []
+    },
+    {
+      "page": 10,
+      "height": 960,
+      "usedHeight": 882,
+      "overflowElements": []
+    },
+    {
+      "page": 11,
+      "height": 960,
+      "usedHeight": 910,
+      "overflowElements": []
+    },
+    {
+      "page": 12,
+      "height": 960,
+      "usedHeight": 900,
+      "overflowElements": []
+    },
+    {
+      "page": 13,
+      "height": 960,
+      "usedHeight": 748,
+      "overflowElements": []
+    },
+    {
+      "page": 14,
+      "height": 960,
+      "usedHeight": 897,
+      "overflowElements": []
+    },
+    {
+      "page": 15,
+      "height": 960,
+      "usedHeight": 832,
+      "overflowElements": []
+    },
+    {
+      "page": 16,
+      "height": 960,
+      "usedHeight": 771,
+      "overflowElements": []
+    },
+    {
+      "page": 17,
+      "height": 960,
+      "usedHeight": 801,
+      "overflowElements": []
+    },
+    {
+      "page": 18,
+      "height": 960,
+      "usedHeight": 801,
+      "overflowElements": []
+    },
+    {
+      "page": 19,
+      "height": 960,
+      "usedHeight": 847,
+      "overflowElements": []
+    },
+    {
+      "page": 20,
+      "height": 960,
+      "usedHeight": 886,
+      "overflowElements": []
+    },
+    {
+      "page": 21,
+      "height": 960,
+      "usedHeight": 727,
+      "overflowElements": []
+    },
+    {
+      "page": 22,
+      "height": 960,
+      "usedHeight": 833,
+      "overflowElements": []
+    },
+    {
+      "page": 23,
+      "height": 960,
+      "usedHeight": 814,
+      "overflowElements": []
+    },
+    {
+      "page": 24,
+      "height": 960,
+      "usedHeight": 851,
+      "overflowElements": []
+    },
+    {
+      "page": 25,
+      "height": 960,
+      "usedHeight": 833,
+      "overflowElements": []
+    },
+    {
+      "page": 26,
+      "height": 960,
+      "usedHeight": 905,
+      "overflowElements": []
+    },
+    {
+      "page": 27,
+      "height": 960,
+      "usedHeight": 851,
+      "overflowElements": []
+    },
+    {
+      "page": 28,
+      "height": 960,
+      "usedHeight": 813,
+      "overflowElements": []
+    },
+    {
+      "page": 29,
+      "height": 960,
+      "usedHeight": 926,
+      "overflowElements": []
+    },
+    {
+      "page": 30,
+      "height": 960,
+      "usedHeight": 747,
+      "overflowElements": []
+    },
+    {
+      "page": 31,
+      "height": 960,
+      "usedHeight": 790,
+      "overflowElements": []
+    },
+    {
+      "page": 32,
+      "height": 960,
+      "usedHeight": 809,
+      "overflowElements": []
+    },
+    {
+      "page": 33,
+      "height": 960,
+      "usedHeight": 915,
+      "overflowElements": []
+    },
+    {
+      "page": 34,
+      "height": 960,
+      "usedHeight": 852,
+      "overflowElements": []
+    }
+  ],
+  "overflow": []
+}

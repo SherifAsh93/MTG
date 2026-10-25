@@ -1,0 +1,12 @@
+.auth-shell{max-width:520px;margin:8vh auto;padding:32px;background:var(--white,#fffdf9);border:1px solid #dcd5c9;border-radius:18px}
+.auth-shell img{width:170px;margin-bottom:22px}.auth-shell h1{font-size:32px}.auth-shell form{display:grid;gap:16px}.auth-shell label{display:grid;gap:6px}
+.auth-shell p{line-height:1.6}.auth-shell .button{justify-content:center}.auth-shell a{color:#79552c}.connected-tools{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0}
+#connection-status{position:fixed;bottom:14px;right:18px;z-index:10000;background:#e5ecdd;color:#294522;padding:10px 16px;border-radius:8px;font-size:12px;max-width:min(90vw,580px)}
+#connection-status:empty{display:none}#connection-status.error{background:#ffe5df;color:#8d3424}
+body[data-saving=true]::after{content:'';position:fixed;inset:0;z-index:9000;background:transparent;cursor:progress}
+.account-list{display:grid;gap:12px}.account-card{padding:16px;border:1px solid #dcd5c9;border-radius:10px}.account-card h3{margin:0 0 8px}.account-card p{margin:4px 0}
+.account-card p,.directory-table code{overflow-wrap:anywhere}
+.sidebar{overflow-y:auto}.delivered-logo{max-width:180px;max-height:72px;object-fit:contain;margin-bottom:10px}
+.account-form{display:grid;gap:12px;margin-top:16px}.account-form label{display:grid;gap:5px}.account-form .checkbox-label{display:flex}.employee-shell{max-width:1000px;margin:30px auto;padding:24px}
+@media(max-width:600px){.auth-shell{margin:20px 14px;padding:22px}.employee-shell{margin:10px;padding:14px}}
+@media(max-width:720px){.sidebar nav{flex-wrap:wrap}.sidebar{overflow:visible}.topbar-actions .avatar,.topbar-actions [data-action=platform-site]{display:none}#account-tools{font-size:10px;padding:8px}.account-form .form-row{display:grid;grid-template-columns:1fr}}

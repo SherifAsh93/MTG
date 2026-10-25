@@ -1,0 +1,5 @@
+# Adapt to the approved VPS/domain and any existing reverse proxy.
+studio.example.invalid {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:4300
+}

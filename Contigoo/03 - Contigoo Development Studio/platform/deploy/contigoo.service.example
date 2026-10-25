@@ -1,0 +1,25 @@
+# Illustrative systemd unit. Paths/user must be validated on the actual VPS.
+[Unit]
+Description=Contigoo application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=contigoo
+Group=contigoo
+WorkingDirectory=/opt/contigoo
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/contigoo/runtime.env
+EnvironmentFile=/etc/contigoo/instance.env
+ExecStart=/usr/bin/node /opt/contigoo/platform/dist/main.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
