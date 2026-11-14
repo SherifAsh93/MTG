@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MTG Logo - Vector version for web -->
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shield shape -->
+  <rect width="200" height="50" rx="8" fill="#2b6cb0" />
+  <!-- MTG Text - simplified version -->
+  <text x="50" y="35" fill="#ffffff" font-family="Arial, sans-serif" font-size="32" font-weight="bold" letter-spacing="1">
+    MTG
+  </text>
+  <!-- Additional design elements can be added here -->
+</svg>
