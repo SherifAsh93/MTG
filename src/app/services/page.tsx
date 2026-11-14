@@ -1,29 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Services() {
+export default function Packages() {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-6">
-            Our Services
+            Travel Packages
           </h1>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            MTG provides comprehensive services tailored to meet the unique
-            needs of each client. Our expert team delivers results that drive
-            growth and create sustainable value.
+            Explore our curated travel packages to breathtaking destinations.
+            From romantic getaways to adventure expeditions, find your perfect journey.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow cursor-pointer">
             <Link
-              href="/services/strategic-consulting"
-              className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors mb-6 self-center"
+              href="/packages/bali-tour"
+              className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center group-hover:bg-indigo-200 transition-colors mb-6 self-center"
             >
               <svg
-                className="h-6 w-6 text-primary"
+                className="h-6 w-6 text-indigo-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -35,26 +34,25 @@ export default function Services() {
               </svg>
             </Link>
             <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
-              Strategic Consulting
+              Bali, Indonesia
             </h3>
             <p className="text-foreground text-muted leading-relaxed text-center">
-              Expert guidance to help you navigate complex challenges and
-              identify opportunities for growth and improvement.
+              Tropical paradise with cultural experiences and beach relaxation.
             </p>
             <a
               href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary hover:bg-primary-hover transition-colors"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-700 transition-colors"
             >
-              Get in Touch
+              Book Now
             </a>
           </div>
           <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow cursor-pointer">
             <Link
-              href="/services/project-management"
-              className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center group-hover:bg-success/20 transition-colors mb-6 self-center"
+              href="/packages/swiss-alps"
+              className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center group-hover:bg-indigo-200 transition-colors mb-6 self-center"
             >
               <svg
-                className="h-6 w-6 text-success"
+                className="h-6 w-6 text-indigo-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -66,26 +64,25 @@ export default function Services() {
               </svg>
             </Link>
             <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
-              Project Management
+              Swiss Alps
             </h3>
             <p className="text-foreground text-muted leading-relaxed text-center">
-              End-to-end project oversight ensuring timelines, budgets, and
-              quality standards are met consistently.
+              Majestic mountain adventures and ski experiences.
             </p>
             <a
               href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-success px-4 py-2 text-sm font-medium text-success hover:bg-success-hover transition-colors"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-700 transition-colors"
             >
-              Get in Touch
+              Book Now
             </a>
           </div>
           <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow cursor-pointer">
             <Link
-              href="/services/delivery-implementation"
-              className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors mb-6 self-center"
+              href="/packages/tokyo-experience"
+              className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center group-hover:bg-indigo-200 transition-colors mb-6 self-center"
             >
               <svg
-                className="h-6 w-6 text-accent"
+                className="h-6 w-6 text-indigo-600"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -100,31 +97,30 @@ export default function Services() {
               </svg>
             </Link>
             <h3 className="text-xl font-semibold text-foreground mb-4 text-center">
-              Delivery & Implementation
+              Tokyo, Japan
             </h3>
             <p className="text-foreground text-muted leading-relaxed text-center">
-              Seamless execution of strategies and solutions from concept to
-              completion with measurable results.
+              Urban exploration and cultural immersion in the capital.
             </p>
             <a
               href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent hover:bg-accent-hover transition-colors"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-700 transition-colors"
             >
-              Get in Touch
+              Book Now
             </a>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-muted/30">
           <h2 className="text-3xl font-bold text-foreground text-center mb-6">
-            Ready to Start Your Project?
+            Start Your Journey
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white font-medium hover:bg-primary-hover transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3 text-white font-medium hover:bg-indigo-700 transition-colors"
             >
-              Contact Us
+              Request Quote
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 24 24"
@@ -138,8 +134,8 @@ export default function Services() {
               </svg>
             </a>
             <a
-              href="mailto:info@mtg.com"
-              className="inline-flex items-center gap-2 rounded-full border border-primary px-6 py-3 text-primary font-medium hover:bg-primary hover-text-white transition-colors"
+              href="mailto:info@travelco.com"
+              className="inline-flex items-center gap-2 rounded-full border border-indigo-600 px-8 py-3 text-indigo-600 font-medium hover:bg-indigo-600 hover:text-white transition-colors"
             >
               Email Us
               <svg
